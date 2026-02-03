@@ -1,0 +1,325 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    height: 100vh;
+    padding: 30px 10px;
+    box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.203);
+}
+
+
+.logo{
+    padding-bottom: 15px;
+    width: 60px;
+}
+
+
+.top-nav,.bottom-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.home-part{
+    padding: 20px;
+    padding-left: 100px;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-icons{
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+    align-items: center;
+}
+
+.search-bar{
+    width: 300px;
+    font-size: 20px;
+    height: 50px;
+    border-radius:30px;
+    padding-left: 30px;
+}
+
+#date{
+    padding-top: 0px;
+    font-size: 18px;
+    color: #2424248a;
+}
+
+.bell-icon, .toggle{
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell-icon img{
+    width: 20px;
+}
+
+
+.toggle img{
+    width: 20px;
+}
+
+/* plan main */
+.plan-main{
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 155, 24, 0.237);
+    margin-left: 100px;
+    margin-right: 30px;
+}
+
+.plana{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.planahead{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.planabut{
+    padding: 2px 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background-color: rgb(183, 105, 2);
+    color: white;
+    border-radius: 6px;
+}
+
+.planb{
+    width: 100%;
+}
+
+.planb table{
+    width: 100%;
+}
+
+.planb table td{
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.planb table th{
+    text-align: left;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.planb table{
+    border: 1px solid gray;
+    padding: 30px 30px;
+    border-radius: 12px;
+}
+
+/* pop main start */
+
+.pop-main{
+    width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px gray;
+    padding: 30px;
+    border-radius:12px ;
+}
+
+.pophead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.pophead p{
+    font-size: 26px;
+}
+
+.pophead button{
+    background-color: transparent;
+    border: none;
+}
+
+.popup{
+    width:100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.pop-main form{
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-main form input{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.pop-main form select{
+    margin-bottom: 10px;
+}
+
+.pop-main form button{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(183, 105, 2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px gray;
+}
+/* no sidebar for desktop view */
+
+.mob-sidebar{
+    display: none;
+}
+
+/* Mobile Responsive starts */
+
+@media screen and (min-width:320PX) and (max-width:768px){
+    
+    /* desktop side bar display none */
+    .sidebar,.search-bar{
+        display: none;
+    }
+    .home-part{
+        padding: 20px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .top-icons{
+        padding-right: 0px;
+        gap: 15px;
+    }
+    .greet h1{
+        font-size: 16px;
+    }
+    #date{
+        font-size: 15px;
+    }
+    .planabut{
+        font-size: 15px;
+    }
+    /* mobile side bar */
+    
+    .mob-sidebar{
+        display: flex;
+        flex-direction:column ;
+        width: 50%;  
+        height: 100vh; 
+        position: fixed;
+        top: 0; 
+        left: -1000px;
+        background-color: black;  
+        backdrop-filter:blur(10px);
+
+    }
+    .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    .mob-sidebar ul{
+        padding: 0px 5px;
+        padding-top: 50px;
+   
+        
+
+    }
+    .mob-sidebar ul li{
+            list-style: none;
+            padding-bottom:20px;
+            }
+    .mob-sidebar ul li a{
+        display: flex;
+        align-items: center;
+         text-decoration: none;
+         gap: 5px; 
+        font-size: 16px;
+        color:white;
+        font-weight: 500;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 16px;
+}
+.mob-sidebar{
+        transition: left 0.5s;
+        transition-timing-function: ease;
+    }
+    .img1 a{
+         background-color: grey;
+        border-radius: 5px;
+    }
+}
+
+/* mobile responsive workout page */
+@media screen and (min-width:320px) and (max-width:768px) {
+    
+.sidebar{
+    display: none;
+}
+.plan-main{
+    margin: 0px 20px;
+    width: 90%;
+    padding: 20px;
+}
+.planb{
+    overflow: scroll;
+}
+.planb table{
+    padding: 10px;
+}
+.planb table th{
+    font-size: 11px;
+    padding: 0px 5px;
+    padding-bottom: 5px;
+}
+.planb table td{
+    font-size: 11px;
+}
+.planahead{
+    font-size: 20px;
+}
+}
