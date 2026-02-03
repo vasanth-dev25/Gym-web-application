@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+    <link rel="stylesheet" href="diet-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-menu">
+            <div class="top-nav">
+                <img src="gym_icon.png" width="90px" alt="" class="logo">
+                <a href="index.html"><img src="./d_normal icons/home.png" alt="" width="35px" ></a>
+                <a href="workout.html"><img src="./d_normal icons/workout.png" width="35px" alt=""></a>
+                <a href="excersise.html"><img src="./d_normal icons/schedule.png" alt="" width="35px" ></a>
+                <a href="diet.html"><img src="./d_filled_icons/diet.png" alt="" width="35px" ></a>
+                <a href="payment.html"><img src="./d_normal icons/payment.png" alt="" width="35px"></a>
+            </div>
+            <div class="bottom-nav">
+                <a href="settings.html"><img src="./d_normal icons/settings.png" alt="" width="35px"></a>
+                <a href="profile.html"><img src="./d_normal icons/user.png" alt="" width="35px"></a>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="home-part">
+        <div class="nav-bar">
+            <div class="greet">
+                <h1>Hello,Creative tech factory</h1>
+                <div id="date">wednesday,Feb01,2025</div>
+            </div>
+            <div class="top-icons">
+                <input type="search" placeholder="search" class="search-bar">
+                <div class="bell-icon"><img src="bell.svg" alt=""></div>
+                <div class="toggle" id="menuBtn"><img src="menu.svg" alt="" onclick="openSidebar()"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIDEBAR FOR MOBILE VIEW -->
+    <div class="mob-sidebar" id="m-sidebar">
+    <ul>
+         <button class="close-btn" onclick="closeSidebar()">✖</button>
+        <li><a href="index.html"> <img src="./m_normal icons/home.png" width="20px" alt="">Home</a></li>
+        <li><a href="workout.html"> <img src="./m_normal icons/workout.png"  width="20px" alt=""> Workout</a></li>
+        <li><a href="excersise.html"><img src="./m_normal icons/schedule.png" width="20px" alt="">Excercise</a></li>
+        <li class="img1"><a href="diet.html"><img src="./m_filled_icons/diet_filled.png" width="20px" alt=""> Diet Plan</a></li>
+        <li><a href="payment.html"><img src="./m_normal icons/payment.png" width="20px" alt=""> Subscription</a></li>
+        <li><a href="settings.html"><img src="./m_normal icons/settings.png" width="20px" alt=""> Settings</a></li>
+        <li><a href="profile.html"> <img src="./m_normal icons/profile.png" width="20px" alt="">User Profile</a></li>
+    </ul>      
+    </div> 
+
+
+    <!-- add workout plan section start -->
+    <section class="plan-main">
+        <div class="plana">
+            <p class="planahead">Diet plan </p>
+            <button class="planabut" onclick="ena()"><img src="https://img.icons8.com/?size=100&id=24717&format=png&color=ffffff" width="17px">Add</button>
+        </div>
+        <div class="planb">
+            <table>
+                <tr>
+                    <th>S.No</th>
+                    <th>Plan Name</th>
+                    <th>Type</th>
+                    <th>Total Calories</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Protien Rich Diet</td>
+                    <td>Veg/Non veg</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vegan Diet</td>
+                    <td>Vegan</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Balanced Diet</td>
+                    <td>Veg/Non veg</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Balanced Veg Diet</td>
+                    <td>Veg</td>
+                    <td>2800</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>High protein -Low Calorie diet</td>
+                    <td>Veg/Non veg</td>
+                    <td>2800</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- popup form start -->
+    <section class="popup" id="popup">
+    <div class="pop-main">
+        <div class="pophead">
+            <p>Add Diet Plan</p>
+            <button onclick="finish()"><img src="https://img.icons8.com/?size=100&id=3062&format=png&color=000000" width="20px"></button>
+        </div>
+        <form method="POST" action="#">
+            <input type="text" name="name" placeholder="Enter diet Plan Name" required>
+            <input type="text" name="duration" placeholder="Enter Workout Duration in Days" required>
+            <select name="workouts" multiple>
+                <option value="#" selected disabled>Select the Workouts</option>
+                <option value="Situps">Sit-Ups</option>
+                <option value="Situps">Sit-Ups</option>
+                <option value="Situps">Sit-Ups</option>
+                <option value="Situps">Sit-Ups</option>
+                <option value="Situps">Sit-Ups</option>
+                <option value="Situps">Sit-Ups</option>
+            </select>
+            <select name="diets" multiple>
+                <option value="#" selected disabled>Select the Diet plan</option>
+                <option value="Healthy Food">Healthy Food</option>
+                <option value="Healthy Food">Healthy Food</option>
+                <option value="Healthy Food">Healthy Food</option>
+                <option value="Healthy Food">Healthy Food</option>
+                <option value="Healthy Food">Healthy Food</option>
+                <option value="Healthy Food">Healthy Food</option>
+            </select>
+            <button>Create</button>
+        </form>
+    </div>
+    </section>
+    <script>
+    var des = document.getElementById("popup");
+
+    function ena(){
+        des.style.display = "flex";
+    }
+
+    function finish(){
+        des.style.display = "none";
+    }
+     // side bar
+
+    const sidebar = document.getElementById('m-sidebar');
+    const menuBtn = document.getElementById('menuBtn');
+    
+    function openSidebar() {
+        sidebar.style.left="0";
+    }
+    function closeSidebar() {
+        sidebar.style.left="-1000px";
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- log in  -->
+     <section class="login">
+        <section class="form">
+            <div class="logo">
+                <h4>ActiveXGym</h4>
+             </div>
+            <div class="greet">
+                <h1>Hey,Welcome back!👋🏻</h1>
+                <p>Log in to your account</p>
+            </div>
+            <div class="input">
+                <form action="">
+                <h2>Email</h2>
+                <input type="mail" class="cont" placeholder="example@gmail.com">
+                <h2>Password</h2>
+                <div class="pass">
+                <input type="password" class="cont" placeholder="********" id="password">
+                <img src="./images/hidden.png" id="eyeicon" width="20px" alt="">
+                </div>
+                 </form>
+                <div class="check">
+                <div> <input type="checkbox"><span>Remember Me</span></div>  
+                <a href="password.html" target="_self">Forgot password</a>
+                </div>
+            </div>
+            <div class="but">
+                <button class="but1">Log in</button>
+                <button class="but2"><img src="./images/google (1).png" width="15px" height="15px">&nbsp;Log in with Google</button>
+                 <p>Don't have an account? <span><a href="sign up.html" target="_self">Sign up here</a></span></p>
+            </div>
+            </section>            
+        <section class="potrait">
+            <div class="bg">
+                <img src="./images/image.png" alt="">   
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, omnis.</p>
+           </div>
+        </section>
+         </section>
+         <script>
+           let eyeicon = document.getElementById("eyeicon");
+           let password = document.getElementById("password");
+           
+            eyeicon.onclick = function(){
+                if(password.type=="password"){
+                    password.type="text";
+                    eyeicon.src= "images/view.png";
+                }
+                else{
+                    password.type="password";
+                    eyeicon.src = "images/hidden.png";  
+                  }   
+            } 
+         </script>
+</body>
+</html>
